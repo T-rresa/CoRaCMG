@@ -10,7 +10,7 @@ from pathlib import Path
 
 import requests
 
-#Model scoring update strategy - 
+#Model scoring update strategy
 #script for model to generate and commit messages
 
 SCRIPT_DIR = Path(__file__).resolve().parent

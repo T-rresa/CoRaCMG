@@ -5,7 +5,7 @@ import re
 import subprocess
 import tempfile
 from pathlib import Path
-
+#compare script for evaluation scores of merged results from different plugins
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 COMPARE_ROOT = SCRIPT_DIR.parent

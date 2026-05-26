@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 
 import requests
-#系统测试脚本
+#system_test script
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 COMPARE_ROOT = SCRIPT_DIR.parent

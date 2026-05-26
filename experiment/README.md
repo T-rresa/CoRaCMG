@@ -1,19 +1,21 @@
-﻿# compare_experiment_data
+# Experiment
 
-本目录按实验数据生命周期进行了整理：
+English | [中文](README.zh-CN.md)
 
-- `inputs/raw/`：原始插件输出或原始实验结果
-- `inputs/aligned/`：与 945 条有效样本对齐后的中间结果
-- `outputs/plugin_comparison/`：插件对比实验的评分表和导出结果
-- `outputs/recommendation/`：模型推荐实验生成结果
-- `outputs/system_test_reports/`：系统测试报告
-- `scripts/`：实验与测试脚本
-- `configs/`：脚本配置模板与评分配置
+This directory organizes experiment data and scripts by data lifecycle:
 
-## 使用顺序
+- `inputs/raw/`: raw plugin outputs or raw experiment results
+- `inputs/aligned/`: intermediate results aligned to the 945 valid samples
+- `outputs/plugin_comparison/`: scoring tables and exported results for plugin comparison
+- `outputs/recommendation/`: generated outputs for model recommendation experiments
+- `outputs/system_test_reports/`: system test reports
+- `scripts/`: experiment and test scripts
+- `configs/`: script configuration templates and scoring configuration
 
-1. 基于 `configs/recommendation_experiment_config.example.json` 准备推荐生成配置，并使用 `scripts/run_recommendation_generation_experiment.py` 生成多模型候选输出。
-2. 使用 `scripts/run_model_recommendation_experiment.py` 回放模型推荐策略。
-3. 使用 `configs/score_config.json` 和 `scripts/score_merged.py` 计算插件对比实验指标。
-4. 使用 `scripts/summarize_scored_results.py` 汇总插件对比实验结果。
-5. 基于 `configs/system_test_config.example.json` 准备系统测试配置，并使用 `scripts/run_system_test_suite.py` 生成系统测试报告。
+## Workflow
+
+1. Prepare recommendation generation configuration based on `configs/recommendation_experiment_config.example.json`, then run `scripts/run_recommendation_generation_experiment.py` to generate multi-model candidate outputs.
+2. Run `scripts/run_model_recommendation_experiment.py` to replay the model recommendation strategy.
+3. Use `configs/score_config.json` and `scripts/score_merged.py` to compute plugin comparison metrics.
+4. Run `scripts/summarize_scored_results.py` to summarize plugin comparison results.
+5. Prepare system test configuration based on `configs/system_test_config.example.json`, then run `scripts/run_system_test_suite.py` to generate system test reports.
