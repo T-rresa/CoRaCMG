@@ -73,11 +73,9 @@ resource/embeddings/*.npy
 *.pdf
 
 # Experiment / archive files that currently contain real endpoints or keys
-archive/testing/root/run_node_service_experiment.py
 experiment/configs/recommendation_experiment_config.example.json
 experiment/outputs/
 experiment/inputs/
-项目具体实现说明.md
 
 # FusionSearch: keep full-embedding/export source, ignore data and retrieval experiments
 fusion_search/.idea/
@@ -97,6 +95,3 @@ fusion_search/**/*.index
 fusion_search/**/*.jsonl
 fusion_search/**/*.npy
 fusion_search/**/*.pkl
-
-node_service/import_feedback.js
-convert_docs_to_sqlite.py
